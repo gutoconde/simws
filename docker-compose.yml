@@ -1,0 +1,13 @@
+version: "3"
+services: 
+  simw:
+    image: simws
+    restart: always
+    build: .
+    ports:
+      - 8000-8999:8080 
+    environment:
+      MYSQL_HOST: mysqldb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_PORT: 3306      
