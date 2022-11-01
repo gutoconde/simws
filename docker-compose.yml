@@ -1,13 +1,20 @@
-version: "3"
-services: 
-  simw:
-    image: simws
+#PROJETO SIMWS
+#CONTEM API COM BANCO DE DADOS SQLITE EM MEMORIA
+#Execute o comando a seguir na raiz do projeto para criar as imagens:
+#>docker-compose up -d --build
+#Para enviar as imagens para o docker-hub
+#>docker-compose push
+version: "3.8"
+services:
+  simws:
     restart: always
-    build: .
+    #environment:
+    #  - SIMWS_DBSOURCE=./database/verbos.db
+    #  - SIMWS_API_PORT=8080
+    container_name: "simws"
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: gutoconde/simws:1.0
     ports:
-      - 8000-8999:8080 
-    environment:
-      MYSQL_HOST: mysqldb
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-      MYSQL_PORT: 3306      
+      - "8080:8080"
