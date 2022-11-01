@@ -46,17 +46,17 @@
     </logger>
     
     <logger name="org.hibernate.SQL" level="trace" additivity="false">
-        <appender-ref ref="RollingFile" />
+        <!-- <appender-ref ref="RollingFile" /> -->
         <appender-ref ref="Console" />
     </logger>
     
     <logger name="org.hibernate.type" level="error" additivity="false">
-        <appender-ref ref="RollingFile" />
+        <!-- <appender-ref ref="RollingFile" /> -->
         <appender-ref ref="Console" />
     </logger>
     
     <logger name="org.springframework" level="error" additivity="false">
-        <appender-ref ref="RollingFile" />
+        <!-- <appender-ref ref="RollingFile" /> -->
         <appender-ref ref="Console" />
     </logger> 
      
