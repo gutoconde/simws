@@ -25,6 +25,10 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-indexer</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -39,6 +43,12 @@
 			<artifactId>sqlite-dialect</artifactId>
 			<version>0.1.2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.amazonaws.serverless</groupId>
+			<artifactId>aws-serverless-java-container-springboot2</artifactId>
+			<version>1.9</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -46,6 +56,18 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-context-indexer</artifactId>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

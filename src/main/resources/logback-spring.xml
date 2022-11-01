@@ -12,6 +12,7 @@
         </layout>
     </appender>
 
+	<!-- 
     <appender name="RollingFile"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOGS}/simws-logger.log</file>
@@ -22,7 +23,6 @@
 
         <rollingPolicy
             class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- rollover daily and when the file reaches 10 MegaBytes -->
             <fileNamePattern>${LOGS}/archived/spring-boot-logger-%d{yyyy-MM-dd}.%i.log
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
@@ -31,16 +31,17 @@
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
     </appender>
+     -->
     
     <!-- LOG everything at INFO level -->
     <root level="info">
-        <appender-ref ref="RollingFile" />
+        <!-- <appender-ref ref="RollingFile" /> -->
         <appender-ref ref="Console" />
     </root>
 
     <!-- LOG "com.gutoconde*" at TRACE level -->
     <logger name="com.gutoconde" level="trace" additivity="false">
-        <appender-ref ref="RollingFile" />
+        <!-- <appender-ref ref="RollingFile" />-->
         <appender-ref ref="Console" />
     </logger>
     
