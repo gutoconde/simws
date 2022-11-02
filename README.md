@@ -17,7 +17,7 @@ Com o CLI aws instalado, execute o comando na raiz do projeto para empacotar o p
 Execute o comando abaixo para fazer o deploy na AWS:
 
 ```
-aws cloudformation deploy --template-file /home/gutoconde/builds/simws/output-sam.yaml --stack-name ServlessSimwsApi  --capabilities CAPABILITY_IAM
+aws cloudformation deploy --template-file /home/gutoconde/builds/simws/output-sam.yaml --stack-name simws  --capabilities CAPABILITY_IAM
 ```
 
 ### Criando a imagem Docker
