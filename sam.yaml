@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 Description: Servicos do aplicativo SIM
 
 Resources:
-  simwsFunction:
+  simws:
     Type: AWS::Serverless::Function
     Properties:
       Handler: com.gutoconde.simws.StreamLambdaHandler::handleRequest
@@ -11,7 +11,7 @@ Resources:
       CodeUri: target/simws-0.0.1-SNAPSHOT-lambda-package.zip
       MemorySize: 10240
       Policies: AWSLambdaBasicExecutionRole
-      Timeout: 60
+      Timeout: 120
       Events:
         GetResource:
           Type: Api
@@ -20,8 +20,8 @@ Resources:
             Method: any
 
 Outputs:
-  SpringBootSimwsApi:
-    Description: URL for application
-    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/simws'
+  simws:
+    Description: URL da aplicacao
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/simws'
     Export:
       Name: simws
