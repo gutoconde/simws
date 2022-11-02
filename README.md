@@ -2,6 +2,13 @@
 
 ### Instalação na AWS
 
+Defina as seguintes variaveis de ambiente: 
+
+```
+- WS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+```
+
 Na raiz do projeto execute o comando abaixo para gerar o arquivo zip:
 
 ```
