@@ -13,7 +13,7 @@
 	<name>simws</name>
 	<description>Servicos do Simulador de Verba de Gabinete</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
