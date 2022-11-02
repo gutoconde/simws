@@ -8,9 +8,6 @@ import com.gutoconde.simws.model.entity.Gabinete;
 @Repository
 public interface RepositorioGabinete extends CrudRepository<Gabinete, Integer> {
 	
-	//@Cacheable
-	//List<Gabinete> findAll();
-	
 	Gabinete findByCodigo(String codigo);
 	
 }
