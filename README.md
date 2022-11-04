@@ -2,6 +2,8 @@
 
 ### Instalação na AWS
 
+Obs.: Nesta versao não é possível atualizar a base de dados sqlite na AWS.
+
 Defina as seguintes variaveis de ambiente: 
 
 ```
