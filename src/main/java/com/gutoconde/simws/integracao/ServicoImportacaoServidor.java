@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -28,13 +29,13 @@ public class ServicoImportacaoServidor {
 	@Value("${simws.dadosabertos.servidores.url}")
 	private String urlServidores;
 
+	@Autowired
 	private RepositorioServidor repositorioServidor;
+	
+	@Autowired
 	private RepositorioGabinete repositorioGabinete;
 	
-	public ServicoImportacaoServidor(RepositorioServidor repositorioServidor, 
-			RepositorioGabinete repositorioGabinete) {
-		this.repositorioServidor = repositorioServidor;
-		this.repositorioGabinete = repositorioGabinete;
+	public ServicoImportacaoServidor() {
 	}
 	
 	public void importarServidores() {

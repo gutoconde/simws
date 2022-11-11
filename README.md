@@ -7,7 +7,7 @@ Obs.: Nesta versao não é possível atualizar a base de dados sqlite na AWS.
 Defina as seguintes variaveis de ambiente: 
 
 ```
-- WS_ACCESS_KEY_ID
+- AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY
 ```
 

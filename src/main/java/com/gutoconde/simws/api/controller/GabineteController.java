@@ -1,5 +1,6 @@
 package com.gutoconde.simws.api.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,14 +14,14 @@ import com.gutoconde.simws.model.entity.Servidor;
 @RestController
 @RequestMapping("/rest/gabinete")
 public class GabineteController {
-
 	
+	@Autowired
 	private RepositorioGabinete repositorioGabinete;
+	
+	@Autowired
 	private RepositorioServidor repositorioServidor;
 
-	public GabineteController(RepositorioGabinete repositorioGabinete, RepositorioServidor repositorioServidor) {
-		this.repositorioGabinete = repositorioGabinete;
-		this.repositorioServidor = repositorioServidor;
+	public GabineteController() {	
 	}
 	
 	@GetMapping
