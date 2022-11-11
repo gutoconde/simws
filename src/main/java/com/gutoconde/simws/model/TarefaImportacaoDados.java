@@ -1,7 +1,5 @@
 package com.gutoconde.simws.model;
 
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +21,7 @@ public class TarefaImportacaoDados {
 	}
 	
 	@Scheduled(cron="${simws.agendamento.importacao}")
-	@EventListener(ApplicationReadyEvent.class)
+	//@EventListener(ApplicationReadyEvent.class)
 	public void executarImportacao() {
 		servicoImportacaoGabinete.importarGabinetes();
 		servicoImportacaoServidor.importarServidores();
