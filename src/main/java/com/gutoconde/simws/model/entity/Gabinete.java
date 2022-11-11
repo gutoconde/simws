@@ -2,33 +2,26 @@ package com.gutoconde.simws.model.entity;
 
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
-@Entity
-@Table(name = "gabinete")
+@DynamoDBTable(tableName="gabinete")
 public class Gabinete {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	@DynamoDBHashKey
+	private String id;
 	
-	@Column(name = "codigo")
-	private String codigo;
-	
-	@Column(name = "nome")
+	@DynamoDBAttribute
 	private String nome;
-
-	public String getCodigo() {
-		return codigo;
+	
+	
+	public Gabinete() {
 	}
-
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
+	
+	public Gabinete(String id, String nome) {
+		this.id = id;
+		this.nome = nome;
 	}
 
 	public String getNome() {
@@ -39,13 +32,17 @@ public class Gabinete {
 		this.nome = nome;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(codigo);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -57,11 +54,11 @@ public class Gabinete {
 		if (getClass() != obj.getClass())
 			return false;
 		Gabinete other = (Gabinete) obj;
-		return Objects.equals(codigo, other.codigo);
+		return Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
-		return "Gabinete {id: " + id + ", codigo: " + codigo + ", nome: " + nome + "}";
+		return "Gabinete {id: " + id + ", nome: " + nome + "}";
 	}
 }

@@ -73,9 +73,7 @@ public class GabineteDTO implements Serializable {
 	}
 	
 	public Gabinete toEntity() {
-		Gabinete gabinete = new Gabinete();
-		gabinete.setNome(nome);
-		gabinete.setCodigo(getCodigoLotacao());
+		Gabinete gabinete = new Gabinete(getCodigoLotacao(), nome);
 		return gabinete;
 	}
 

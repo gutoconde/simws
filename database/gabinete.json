@@ -1,0 +1,28 @@
+{
+	"TableName": "gabinete",  
+	
+	"AttributeDefinitions": [
+		{
+	      "AttributeName": "id",
+	      "AttributeType": "S"
+	    }
+	],
+	"KeySchema": [
+	    {
+	      "KeyType": "HASH",
+	      "AttributeName": "id"
+	    }
+  	],
+  	"Projection": {
+	  	"NonKeyAttributes": [
+	        {
+	          "AttributeName": "nome",
+	          "AttributeType": "S"
+	        }
+		]
+	},
+	"ProvisionedThroughput": {
+	  "ReadCapacityUnits": 5,
+	  "WriteCapacityUnits": 5
+	}
+}

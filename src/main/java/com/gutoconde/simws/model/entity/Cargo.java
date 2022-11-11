@@ -3,34 +3,22 @@ package com.gutoconde.simws.model.entity;
 import java.util.List;
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
-@Entity
-@Table(name = "cargo")
+@DynamoDBTable(tableName="cargo")
 public class Cargo {
 	
-	@Id
-	@GeneratedValue()
-	private Integer id;
-	
-	@Column(name = "codigo")
+	@DynamoDBHashKey
 	private String codigo;
 	
-	@OneToMany(mappedBy = "cargo")
-	private List<HistoricoVencimentoCargo> historicoVencimentoCargo;
+	@DynamoDBAttribute
+	private List<HistoricoVencimentoCargo> historicosVencimentoCargo;
 	
 	public Cargo() {
 	}
 	
-	public Integer getId() {
-		return id;
-	}
-
 	public String getCodigo() {
 		return codigo;
 	}
@@ -39,12 +27,12 @@ public class Cargo {
 		this.codigo = codigo;
 	}
 
-	public List<HistoricoVencimentoCargo> getHistoricoVencimentoCargo() {
-		return historicoVencimentoCargo;
+	public List<HistoricoVencimentoCargo> getHistoricosVencimentoCargo() {
+		return historicosVencimentoCargo;
 	}
 
-	public void setHistoricoVencimentoCargo(List<HistoricoVencimentoCargo> historicoVencimentoCargo) {
-		this.historicoVencimentoCargo = historicoVencimentoCargo;
+	public void setHistoricosVencimentoCargo(List<HistoricoVencimentoCargo> historicosVencimentoCargo) {
+		this.historicosVencimentoCargo = historicosVencimentoCargo;
 	}
 
 	@Override
@@ -63,4 +51,11 @@ public class Cargo {
 		Cargo other = (Cargo) obj;
 		return Objects.equals(codigo, other.codigo);
 	}
+
+	@Override
+	public String toString() {
+		return "Cargo {codigo: " + codigo + "}";
+	}
+	
+	
 }

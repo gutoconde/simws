@@ -153,7 +153,7 @@ public class ServidorDTO implements Serializable {
 	public Servidor toEntity() {
 		Servidor servidor = new Servidor();
 		servidor.setNome(nome);
-		servidor.setPonto(ponto);
+		servidor.setId(ponto);
 		return servidor;
 	}
 

@@ -1,6 +1,7 @@
 package com.gutoconde.simws.integracao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,10 +51,13 @@ public class ServicoImportacaoServidor {
 				Servidor servidor = ser.toEntity();
 				servidoresLidos++;
 				try {
-					Gabinete gabinete = repositorioGabinete.findByCodigo(ser.getCodigoLotacao());
-					servidor.setLotacao(gabinete);
-					servidor.setCodigoCargo(ser.getCargo());
-					repositorioServidor.save(servidor);
+					Optional<Gabinete> opGabinete = repositorioGabinete.findById(ser.getCodigoLotacao());
+					if(opGabinete.isPresent()) {
+						servidor.setIdGabinete(opGabinete.get().getId());
+						servidor.setCodigoCargo(ser.getCargo());
+						repositorioServidor.save(servidor);
+					}
+					
 					servidoresImportados++;
 				}catch(Exception e) {
 					logger.error("Erro ao importar servidor.", e);

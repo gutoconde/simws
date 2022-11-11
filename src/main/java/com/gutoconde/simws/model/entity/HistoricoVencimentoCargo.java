@@ -1,72 +1,38 @@
 package com.gutoconde.simws.model.entity;
 
-import java.util.Objects;
+import java.io.Serializable;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Entity
-@Table(name = "historicovencimentocargo")
-public class HistoricoVencimentoCargo {
+@DynamoDBDocument
+public class HistoricoVencimentoCargo implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue()
-	private Integer id;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="idcargo")
-	@JsonIgnore
-	private Cargo cargo;
-	
-	@Column(name="vencimento")
+	@DynamoDBAttribute
 	private Float vencimento;
 	
-	@Column(name="grg")
+	@DynamoDBAttribute
 	private Float grg;
 	
-	@Column(name = "datainicio")
+	@DynamoDBAttribute(attributeName = "dataInicio")
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private String dataInicio;
 	
-	@Column(name="datafim", nullable = true)
+	@DynamoDBAttribute(attributeName = "dataFim")
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private String dataFim;
 	
-	@Column(name="datacancelamento", nullable = true )
+	@DynamoDBAttribute(attributeName = "dataCancelamento")
 	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
 	private String dataCancelamento;
 	
 	public HistoricoVencimentoCargo() {
 		
-	}
+	}	
 	
-	public Integer getId() {
-		return id;
-	}
-	
-	
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	public Cargo getCargo() {
-		return cargo;
-	}
-
-	public void setCargo(Cargo cargo) {
-		this.cargo = cargo;
-	}
-
 	public Float getVencimento() {
 		return vencimento;
 	}
@@ -82,24 +48,23 @@ public class HistoricoVencimentoCargo {
 	public void setGrg(Float grg) {
 		this.grg = grg;
 	}
-	
+
 	public String getDataInicio() {
-		return this.dataInicio;
+		return dataInicio;
 	}
 
-	public void setDataInicio(String dataInicioValue) {
-		this.dataInicio = dataInicioValue;
+	public void setDataInicio(String dataInicio) {
+		this.dataInicio = dataInicio;
 	}
-	
+
 	public String getDataFim() {
-		return this.dataFim;
+		return dataFim;
 	}
 
-	public void setDataFim(String dataFimValue) {
-		this.dataInicio = dataFimValue;
+	public void setDataFim(String dataFim) {
+		this.dataFim = dataFim;
 	}
-	
-	
+
 	public String getDataCancelamento() {
 		return dataCancelamento;
 	}
@@ -107,23 +72,4 @@ public class HistoricoVencimentoCargo {
 	public void setDataCancelamento(String dataCancelamento) {
 		this.dataCancelamento = dataCancelamento;
 	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		HistoricoVencimentoCargo other = (HistoricoVencimentoCargo) obj;
-		return Objects.equals(id, other.id);
-	}
-	
-	
 }

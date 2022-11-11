@@ -2,50 +2,35 @@ package com.gutoconde.simws.model.entity;
 
 import java.util.Objects;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
-@Entity
-@Table(name="servidor")
+
+@DynamoDBTable(tableName = "servidor")
 public class Servidor {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	@DynamoDBHashKey
+	private String id;
 	
-	@Column(name = "ponto")
-	private String ponto;
-	
-	@Column(name = "nome")
+	@DynamoDBAttribute
 	private String nome;
 	
-	@ManyToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name="idgabinete")
-	private Gabinete lotacao;
+	@DynamoDBAttribute
+	private String idGabinete;
 	
-	@Column(name = "codigocargo")
+	@DynamoDBAttribute
 	private String codigoCargo;
 	
 	public Servidor() {
 	}
-	
-	public Long getId() {
+
+	public String getId() {
 		return id;
 	}
 
-	public String getPonto() {
-		return ponto;
-	}
-
-	public void setPonto(String ponto) {
-		this.ponto = ponto;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -56,12 +41,12 @@ public class Servidor {
 		this.nome = nome;
 	}
 
-	public Gabinete getLotacao() {
-		return lotacao;
+	public String getIdGabinete() {
+		return idGabinete;
 	}
 
-	public void setLotacao(Gabinete lotacao) {
-		this.lotacao = lotacao;
+	public void setIdGabinete(String idGabinete) {
+		this.idGabinete = idGabinete;
 	}
 
 	public String getCodigoCargo() {
@@ -74,7 +59,7 @@ public class Servidor {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ponto);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -86,12 +71,12 @@ public class Servidor {
 		if (getClass() != obj.getClass())
 			return false;
 		Servidor other = (Servidor) obj;
-		return Objects.equals(ponto, other.ponto);
+		return Objects.equals(id, other.id);
 	}
 	
 	@Override
 	public String toString() {
-		return "Servidor {id: " + id + ", ponto: " + ponto + ", nome: " + nome + ", lotacao: " + lotacao
+		return "Servidor {id: " + id + ", nome: " + nome + ", idGabinete: " + idGabinete
 				+ ", codigoCargo: " + codigoCargo + "}";
 	}
 }

@@ -14,16 +14,15 @@ import com.gutoconde.simws.model.entity.Servidor;
 @RequestMapping("/rest/gabinete")
 public class GabineteController {
 
+	
 	private RepositorioGabinete repositorioGabinete;
-
 	private RepositorioServidor repositorioServidor;
 
-	public GabineteController(RepositorioGabinete repositorioGabinete,
-			RepositorioServidor repositorioServidor) {
+	public GabineteController(RepositorioGabinete repositorioGabinete, RepositorioServidor repositorioServidor) {
 		this.repositorioGabinete = repositorioGabinete;
 		this.repositorioServidor = repositorioServidor;
 	}
-
+	
 	@GetMapping
 	public Iterable<Gabinete> listAll() {
 		Iterable<Gabinete> gabinetes = repositorioGabinete.findAll();
@@ -32,6 +31,6 @@ public class GabineteController {
 
 	@GetMapping(path = "/{codigo}/servidores", produces = "application/json")
 	public Iterable<Servidor> listarServidores(@PathVariable String codigo) {
-		return repositorioServidor.listarServidoresPeloCodigoDaLotacao(codigo);
+		return repositorioServidor.findByIdGabinete(codigo);
 	}
 }

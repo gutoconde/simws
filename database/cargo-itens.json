@@ -1,0 +1,804 @@
+{
+	"cargo": [
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP01"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "1025.12"
+	          						},
+	          						"grg": {
+	            						"N": "1025.12"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP02"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "1176.77"
+	          						},
+	          						"grg": {
+	            						"N": "1176.77"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP03"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "1328.41"
+	          						},
+	          						"grg": {
+	            						"N": "1328.41"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP04"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "1480.06"
+	          						},
+	          						"grg": {
+	            						"N": "1480.06"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP05"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "1631.72"
+	          						},
+	          						"grg": {
+	            						"N": "1631.72"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP06"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "1783.34"
+	          						},
+	          						"grg": {
+	            						"N": "1783.34"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP07"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "1935.01"
+	          						},
+	          						"grg": {
+	            						"N": "1935.01"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP08"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "2086.65"
+	          						},
+	          						"grg": {
+	            						"N": "2086.65"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP09"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "2238.29"
+	          						},
+	          						"grg": {
+	            						"N": "2238.29"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP10"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "2389.94"
+	          						},
+	          						"grg": {
+	            						"N": "2389.94"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP11"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "2541.59"
+	          						},
+	          						"grg": {
+	            						"N": "2541.59"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP12"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "2693.23"
+	          						},
+	          						"grg": {
+	            						"N": "2693.23"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP13"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "2844.88"
+	          						},
+	          						"grg": {
+	            						"N": "2844.88"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP14"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "3148.17"
+	          						},
+	          						"grg": {
+	            						"N": "3148.17"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP15"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "3451.45"
+	          						},
+	          						"grg": {
+	            						"N": "3451.45"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP16"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "3754.75"
+	          						},
+	          						"grg": {
+	            						"N": "3754.75"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP17"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "4058.04"
+	          						},
+	          						"grg": {
+	            						"N": "4058.04"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP18"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "4361.33"
+	          						},
+	          						"grg": {
+	            						"N": "4361.33"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP19"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "4816.26"
+	          						},
+	          						"grg": {
+	            						"N": "4816.26"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP20"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "5271.20"
+	          						},
+	          						"grg": {
+	            						"N": "5271.20"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP21"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "5726.13"
+	          						},
+	          						"grg": {
+	            						"N": "5726.13"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP22"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "6181.07"
+	          						},
+	          						"grg": {
+	            						"N": "6181.07"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP23"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "6636.00"
+	          						},
+	          						"grg": {
+	            						"N": "6636.00"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP24"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "7242.59"
+	          						},
+	          						"grg": {
+	            						"N": "7242.59"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		},
+		{
+			"PutRequest": {
+				"Item": {
+					"codigo": {
+						"S": "SP25"
+					},
+					"historicosVencimentoCargo": {
+						"L": [
+							{ "M" : 
+								{
+									"vencimento": {
+	            						"N": "7849.16"
+	          						},
+	          						"grg": {
+	            						"N": "7849.16"
+	          						},
+	          						"dataInicio": {
+	          							"S" : "2022-01-01"
+	          						},
+	          						"dataFim": {
+	          							"NULL": true
+	          						},
+	          						"dataCancelamento": {
+	          							"NULL": true
+	          						}
+	          					}
+	          				}
+						]
+					}
+				}
+			}
+		}
+	]
+}
