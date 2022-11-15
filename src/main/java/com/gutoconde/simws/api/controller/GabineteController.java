@@ -1,6 +1,7 @@
 package com.gutoconde.simws.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Import;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import com.gutoconde.simws.model.entity.Servidor;
 
 @RestController
 @RequestMapping("/rest/gabinete")
+@Import({RepositorioGabinete.class, RepositorioServidor.class})
 public class GabineteController {
 	
 	@Autowired
