@@ -9,7 +9,7 @@ Resources:
       Handler: com.gutoconde.simws.StreamLambdaHandler::handleRequest
       Runtime: java11
       CodeUri: target/simws-0.0.1-lambda-package.zip
-      MemorySize: 10240
+      MemorySize: 4096
       Policies: AWSLambdaBasicExecutionRole
       Timeout: 60
       Events:
